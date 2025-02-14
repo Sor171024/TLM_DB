@@ -14,7 +14,6 @@ function importControllers(folderPath) {
 
   return controllers;
 }
-
 // โหลด controllers ทั้งหมด
 const controllers = importControllers(path.join(__dirname, "../controller"));
 const preparedata = importControllers(path.join(__dirname, "../prepare_data"));
@@ -24,6 +23,5 @@ router.get("/data", controllers.calculate_data);
 router.get("/top_ten_usage", controllers.top_ten_usage);
 router.get("/graph_data", controllers.graph_data);
 router.get("/device_status", controllers.status_device);
-// router.get("/device_alarms", controllers.device_alarm);
 
 module.exports = router;
