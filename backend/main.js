@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const { readdirSync } = require("fs");
-const PORT = 8080;
+const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json());
